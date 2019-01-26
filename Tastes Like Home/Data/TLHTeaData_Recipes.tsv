@@ -1,0 +1,37 @@
+Ingredient 1	Ingredient 2	Result
+Strawberry	Green	Strawberry Green
+Green	Honey	Honey Green
+Honey	Strawberry	Sweet Fruit
+Strawberry	Peach	Fruit
+Green	Peach	Peach Green
+Honey	Peach	Sweet Fruit
+Strawberry	Oolong	Fruity Oolong
+Green	Oolong	Dragon
+Honey	Oolong	Succulent Oolong
+Strawberry	Black	Fruit Black
+Green	Black	YinYang
+Honey	Black	Luscious Black
+Peach	Oolong	Peach Oolong
+Peach	Black	Fruit Black
+Oolong	Black	Demon
+Strawberry	Ginger	Fruit Spice
+Green	Ginger	Ginger Green
+Honey	Ginger	Sweet Spice
+Peach	Ginger	Fruit Spice
+Oolong	Ginger	Ginger Oolong
+Black	Ginger	Ginger Black
+Strawberry	Mint	Mint Fruit
+Green	Mint	Mint Green
+Honey	Mint	Sweet Spice
+Peach	Mint	Mint Fruit
+Oolong	Mint	Mint Oolong
+Black	Mint	Mint Black
+Strawberry	Jasmine	Jasmine Fruit
+Green	Jasmine	Aromatic
+Honey	Jasmine	Beau
+Peach	Jasmine	Jasmine Fruit
+Oolong	Jasmine	Phoenix
+Black	Jasmine	Nass
+Ginger	Mint	Too-Much-Spice
+Mint	Jasmine	Jasmine Mint
+Ginger	Jasmine	Jasmine Spice
