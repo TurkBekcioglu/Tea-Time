@@ -10,12 +10,12 @@ public class CraftingManagerController : MonoBehaviour
 	const int TIRED = 2;
 	const int MAD = 3;
 	const int DESC = 4;
-	const string statsPath = "Data/TLHTeaData_Stats.tsv";
-	const string recipePath = "Data/TLHTeaData_Recipes.tsv";
+	const string statsPath = "Data/TLHTeaData_Stats.csv";
+	const string recipePath = "Data/TLHTeaData_Recipes.csv";
 
-	string ingredient1;
-	string ingredient2;
-	string result;
+	public string ingredient1;
+	public string ingredient2;
+	public string result;
 
 	// Start is called before the first frame update
     void Start()
@@ -31,15 +31,15 @@ public class CraftingManagerController : MonoBehaviour
         
     }
 
-	// Get data from TSV
-	string[,] GetTSVData(string path, int itemsPerLine)
+	// Get data from CSV
+	string[,] GetCSVData(string path, int itemsPerLine)
 	{
 		string[] lines = File.ReadAllLines(path);
 		int l = lines.Length;
 		string[,] data = new string[itemsPerLine, l];
 		for(int i = 0; i < l; i++) 
 		{
-			string[] line = lines[i].Split('\t');
+			string[] line = lines[i].Split(',');
 			for(int j = 0; j < line.Length; j++) 
 			{
 				data[i, j] = line[j];
@@ -50,7 +50,7 @@ public class CraftingManagerController : MonoBehaviour
 
 	string teaLookup(string name, int item)
 	{
-		string[,] data = GetTSVData(statsPath, 5);
+		string[,] data = GetCSVData(statsPath, 5);
 		for(int i = 0; i < data.Length / 5; i++) 
 		{
 			if (data[i, NAME] == name) 
@@ -82,7 +82,7 @@ public class CraftingManagerController : MonoBehaviour
 		}
 		else 
 		{
-			string[,] recipes = GetTSVData(recipePath, 3);
+			string[,] recipes = GetCSVData(recipePath, 3);
 			for(int i = 0; i < recipes.Length / 3; i++) 
 			{
 				if ((recipes[i, 0] == ingredient1 && recipes[i, 1] == ingredient2)
