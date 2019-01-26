@@ -1,0 +1,26 @@
+fileFormatVersion: 2
+guid: fafe53c222d23423d87ab7ff92df790b
+TrueTypeFontImporter:
+  externalObjects: {}
+  serializedVersion: 4
+  fontSize: 16
+  forceTextureCase: -2
+  characterSpacing: 0
+  characterPadding: 1
+  includeFontData: 1
+  fontName: Blanch
+  fontNames:
+  - Blanch
+  fallbackFontReferences:
+  - {fileID: 12800000, guid: 9404cea2d5d2f4d2fbe8c29d186109a6, type: 3}
+  - {fileID: 12800000, guid: 471a44b2a2e904be483c102cc32b84df, type: 3}
+  - {fileID: 12800000, guid: e05e452bc229b439cb45c8b5cc1cabf4, type: 3}
+  - {fileID: 12800000, guid: c8599e0c069e54db1a2c24c025af436f, type: 3}
+  customCharacters: 
+  fontRenderingMode: 0
+  ascentCalculationMode: 1
+  useLegacyBoundsCalculation: 0
+  shouldRoundAdvanceValue: 1
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
