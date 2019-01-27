@@ -30,23 +30,18 @@ public class Mix : MonoBehaviour
 			string ing1 = mixSlot1.GetComponent<HerbContainer>().ingredient;
 			string ing2 = mixSlot2.GetComponent<HerbContainer>().ingredient;
 
-			HerbPlacement.herbs = 0;
+			HerbPlacement.herbs++;
 
 			Tea t = RecipeManager.brew(ing1, ing2);
-			Debug.Log(t.teaName);
+			Debug.Log("654" + t.teaName);
 			string path = "Art/teas/" + t.teaName;
 
 			Sprite sp = Resources.Load<Sprite>(path);
 
-			GameObject mixHerb = this.gameObject.transform.GetChild(0).gameObject;
+			GameObject mixHerb = GameObject.FindGameObjectWithTag("MixHerb");
 			mixHerb.GetComponent<SpriteRenderer>().sprite = sp;
-			//mixSlot2.GetComponent<SpriteRenderer>().sprite = sp;
+			mixHerb.GetComponent<MixButton>().setTea(t);
 		}
 	}
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
+		
 }
