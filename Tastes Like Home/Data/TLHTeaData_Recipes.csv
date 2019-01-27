@@ -9,7 +9,7 @@ strawberry,oolong,fruity_oolong
 green,oolong,dragon
 honey,oolong,succulent_oolong
 strawberry,black,fruit_black
-green,black,yin_yang
+green,black,ying_yang
 honey,black,luscious_black
 peach,oolong,peach_oolong
 peach,black,fruit_black
@@ -28,10 +28,10 @@ oolong,mint,mint_oolong
 black,mint,mint_black
 strawberry,jasmine,jasmine_fruit
 green,jasmine,aromatic
-honey,jasmine,beau/
+honey,jasmine,beau
 peach,jasmine,jasmine_fruit
 oolong,jasmine,phoenix
-black,jasmine,nas/
+black,jasmine,nas
 ginger,mint,too_much_spice
 mint,jasmine,jasmine_mint
 ginger,jasmine,jasmine_spice
