@@ -34,7 +34,7 @@ public class Mix : MonoBehaviour
 
 			Tea t = RecipeManager.brew(ing1, ing2);
 			Debug.Log("654" + t.teaName);
-			string path = "Art/teas/" + t.teaName;
+			string path = "Art/Teas/TeaLeaves/" + t.teaName;
 
 			Sprite sp = Resources.Load<Sprite>(path);
 

@@ -11,7 +11,7 @@ public class GameController : MonoBehaviour
 	float timer = 0;
 	public static int happinessToday = 0;
 	public int happinessOverall = 0;
-	public int unlockLevel = 0;
+	public int unlockLevel = 1;
 	public int[] goals;
 
 
@@ -28,6 +28,7 @@ public class GameController : MonoBehaviour
 		goals[1] = 300;
 		goals[2] = 500;
 		goals[3] = 750;
+		Unlock();
   }
 
   // Update is called once per frame
