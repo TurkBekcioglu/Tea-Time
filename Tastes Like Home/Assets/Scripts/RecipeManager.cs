@@ -5,26 +5,20 @@ using UnityEngine;
 
 public class RecipeManager : MonoBehaviour
 {
-  static Recipe[] recipes;
-  // Start is called before the first frame update
-  void Start()
-  {
-    recipes = initRecipes("Data/TLHTeaData_Recipes.csv");
-  }
+  public static Recipe[] recipes = new Recipe[1];
 
-  private Recipe[] initRecipes(string path)
+  public static void initRecipes(string path)
   {
     string[] lines = File.ReadAllLines(path);
-    Recipe[] recipes = new Recipe[lines.Length];
+    Recipe[] new_recipes = new Recipe[lines.Length];
+    recipes = new_recipes;
 
-    for (int i = 0; i < lines.Length; i++)
+    for (int i = 1; i < lines.Length; i++)
     {
       string[] r = lines[i].Split(',');
-      Recipe recipe = new Recipe(r[0], r[1], r[2]);
-      recipes[i] = recipe;
+      Recipe recipe = new Recipe(r[2], r[0], r[1]);
+      recipes[i - 1] = recipe;
     }
-
-    return recipes;
   }
 
   public static Tea brew(string i1, string i2)

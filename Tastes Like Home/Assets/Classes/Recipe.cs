@@ -11,9 +11,14 @@ public class Recipe : MonoBehaviour
 
   public Recipe(string result, string ingredient1, string ingredient2)
   {
-    this.result = TeaManager.getTea(result);
+    this.result = getResult(result);
     this.ingredient1 = RecipeManager.getIngredient(ingredient1);
     this.ingredient2 = RecipeManager.getIngredient(ingredient2);
     this.discovered = false;
+  }
+
+  private Tea getResult(string result)
+  {
+    return TeaManager.getTea(result);
   }
 }
