@@ -4,10 +4,14 @@ using UnityEngine;
 
 public class GuestController : MonoBehaviour
 {	
-	enum type {ORC, ELF, HUMAN};
-
 	// Amount that the guest moves per frame
 	public float MoveSpeed;
+
+	public int race;
+
+	public int color;
+
+	public Vector2 exit;
 
 	// Position that the guest is currently headed to
 	private Vector2 dest;
@@ -15,15 +19,30 @@ public class GuestController : MonoBehaviour
 	// Detour position that the guest heads toward when the path is blocked
 	private Vector2 roundabout;
 
-
 	private int personality;
 
 	private int typeOfGuest;
+
+	private Animator animator;
+
+	public bool served;
+
+	public bool leave;
+
+	private bool leftChair;
 
     // Start is called before the first frame update
     void Start()
     {
 		dest = GameObject.Find("Bar").transform.position;
+		animator = GetComponent<Animator>();
+		animator.SetInteger("Race", race);
+		animator.SetInteger("Color", color);
+		animator.SetBool("AtChair", false);
+		animator.SetBool("ChairOnLeft", true);
+		animator.SetInteger("MovementDirection_X", 1);
+		animator.SetInteger("MovementDirection_Y", 0);
+		served = false;
     }
 
 	// Update is called once per frame
@@ -31,6 +50,14 @@ public class GuestController : MonoBehaviour
 	{
 		// Guest's current position
 		Vector2 posn = transform.position;
+
+		if (leave) {
+			dest = exit;
+			if (posn == exit) {
+				Destroy(gameObject);
+			}
+		}
+
 		// Distance between the guest's current position and destination
 		Vector2 dist = dest - posn;
 
@@ -58,34 +85,58 @@ public class GuestController : MonoBehaviour
 		 * After this, there needs to be some code to make the guest head to the door and despawn
 		 * once their job is done.
 		 * */
-		if (posn.x == GameObject.Find("Bar").transform.position.x) {
+		if (posn.x == GameObject.Find("Bar").transform.position.x && served) {
 			int rando = (int)(Random.value*5);
 
 			switch(rando)
 			{
 				case 0:
 					dest = new Vector2(-8.5f, -1.8f);
+					leftChair = true;
 					break;
 				case 1:
 					dest = new Vector2(-5.5f, -1.8f);
+					leftChair = false;
 					break;
 				case 2:
 					dest = new Vector2(-4.5f, 1.45f);
+					leftChair = true;
 					break;
 				case 3:
 					dest = new Vector2(-1.5f, 1.45f);
+					leftChair = false;
 					break;
 				case 4:
 					dest = new Vector2(-2.5f, -3.21f);
+					leftChair = true;
 					break;
 				case 5:
 					dest = new Vector2(0.5f, -3.21f);
+					leftChair = false;
 					break;
 				default:
 					dest = new Vector2(0f,0f);
 					print("ERROR: Error finding chair");
 					break;
 			}
+		}
+
+		if(dest.x > transform.position.x) {
+			animator.SetInteger("MovementDirection_X", 1);
+			GetComponent<SpriteRenderer>().flipX = true;
+		} else if(dest.x < transform.position.x) {
+			animator.SetInteger("MovementDirection_X", -1);
+			GetComponent<SpriteRenderer>().flipX = false;
+		} else {
+			animator.SetInteger("MovementDirection_X", 0);
+		}
+
+		if(served && dist == Vector2.zero && transform.position != GameObject.Find("Bar").transform.position) {
+			animator.SetBool("AtChair", true);
+			animator.SetInteger("MovementDirection_X", 0);
+			GetComponent<SpriteRenderer>().flipX = leftChair;
+		} else {
+			animator.SetBool("AtChair", false);
 		}
 	}
 
@@ -147,5 +198,6 @@ public class GuestController : MonoBehaviour
 			print("ERROR: Detour finding failure");
 			return Vector2.zero;
 		}
+
 	}
 }
