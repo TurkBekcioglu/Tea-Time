@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Tea : MonoBehaviour
+public class Tea
 {
   public string teaName;
   public TeaType teaType;

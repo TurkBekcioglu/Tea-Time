@@ -2,7 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 
-public class Recipe : MonoBehaviour
+public class Recipe
 {
   public Tea result;
   public Ingredient ingredient1;
