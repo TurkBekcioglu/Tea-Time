@@ -10,6 +10,8 @@ TagManager:
   - Mug
   - MixHerb
   - Serv
+  - DayCard
+  - NightCard
   layers:
   - Default
   - TransparentFX
