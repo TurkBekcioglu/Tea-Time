@@ -571,6 +571,17 @@ PrefabInstance:
       propertyPath: teaName
       value: peach
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!1 &279338529 stripped
@@ -784,6 +795,18 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 445706059}
   m_CullTransparentMesh: 0
+--- !u!114 &479083825 stripped
+MonoBehaviour:
+  m_CorrespondingSourceObject: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+    type: 3}
+  m_PrefabInstance: {fileID: 804103434}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 1392445389, guid: f70555f144d8491a825f0804e09c671c, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!224 &520419139 stripped
 RectTransform:
   m_CorrespondingSourceObject: {fileID: 3734948724255084011, guid: f1ba063b777d2f7489c9991d064dc58d,
@@ -1166,6 +1189,17 @@ PrefabInstance:
       propertyPath: teaName
       value: strawberry
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!1 &654363304
@@ -1489,6 +1523,17 @@ PrefabInstance:
       propertyPath: teaName
       value: mint
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!1 &785626209
@@ -1740,7 +1785,18 @@ PrefabInstance:
         type: 3}
       propertyPath: jar
       value: 
+      objectReference: {fileID: 479083825}
+    - target: {fileID: 6575425264972562227, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: ingredient
+      value: strawberry
       objectReference: {fileID: 0}
+    - target: {fileID: 6575425264972562227, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: herb
+      value: 
+      objectReference: {fileID: 21300000, guid: 513244b240bdc4be6894ffc1ab336a20,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!1 &862571569
@@ -2820,6 +2876,17 @@ PrefabInstance:
       propertyPath: teaName
       value: ginger
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!224 &1490181242 stripped
@@ -2965,6 +3032,17 @@ PrefabInstance:
       propertyPath: teaName
       value: honey
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!1 &1537920214
@@ -3302,6 +3380,17 @@ PrefabInstance:
       propertyPath: teaName
       value: jasmine
       objectReference: {fileID: 0}
+    - target: {fileID: 9042013298117527809, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 3734948723126192699, guid: f1ba063b777d2f7489c9991d064dc58d,
+        type: 3}
+      propertyPath: m_Sprite
+      value: 
+      objectReference: {fileID: 21300000, guid: f5676c0e47951954082721df65e2cbed,
+        type: 3}
     m_RemovedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: f1ba063b777d2f7489c9991d064dc58d, type: 3}
 --- !u!224 &1804029616 stripped

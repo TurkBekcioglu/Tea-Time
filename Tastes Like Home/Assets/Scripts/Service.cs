@@ -23,6 +23,7 @@ public class Service : MonoBehaviour
 		if (HerbPlacement.herbs == 4) {
 			Debug.Log("123r55555555");
 			mug.GetComponent<SpriteRenderer>().sprite = sp;
+			HerbPlacement.herbs = 0;
 		}
 	}
 
